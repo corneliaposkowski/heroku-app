@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Conny´s Taschenrechner</title>
+
+   <style>
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+      }
+      input[type=text] {
+          padding:5px;
+          border:2px solid #ccc;
+          border-radius: 5px;
+      }
+      input[type=text]:focus {
+          border-color:#333;
+      }
+      input[type=submit] {
+          padding:5px 15px;
+          background:#ccc;
+          border:0 none;
+          cursor:pointer;
+          border-radius: 5px;
+      }
+  
+    </style>
+
+ </head>
+ <body>
+   <h1> My Form: {{name}}</h1>
+
+   <form action="/result" method="post">
+     1.Zahl - bitte eingeben:<br>
+     <input type="text" name="Zahl1" value=""><br>
+     <br>
+
+     <div class="form-group">
+           <label for="Rechenart">Example multiple select</label>
+           <select multiple="" class="form-control" id="Rechenart">
+             <option value="+">+<
+             <option value="-">-<
+             <option value="*">*<
+             <option value="/">/<
+             </select>
+         </div>
+
+     2.Zahl - bitte eingeben:<br>
+     <input type="text" name="Zahl2" value=""><br><br>
+
+     Ergebnis:<br>
+     <input type="submit" value="Rechnen">
+   </form>
+
+ </body>
+</html>
