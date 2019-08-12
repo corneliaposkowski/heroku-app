@@ -21,3 +21,18 @@ def result():
    place = request.form['place']
    print("Firstname = " + firstname, "place = " + place)
    return "Thank you! " + firstname + " in " + place
+
+
+@app.route('/result', methods=['get', 'post'] )
+def result():
+
+   input("Gib bitte die erste Zahl ein: ")
+   zahl1 = request.form['Zahl1']
+   input("Gib bitte die zweite Zahl ein: ")
+   zahl2 = request.form['Zahl2']
+   input("Gib bitte die Rechenart ein: ")
+   rechenart = request.form['rechenart']
+   print("Zahl1 = " + zahl1, "Zahl2 = " + zahl2)
+   button = Button(fenster, text="Rechnen", command=action)
+   button.pack()
+   return "Das Ergebnis lautet " + ergebnis
